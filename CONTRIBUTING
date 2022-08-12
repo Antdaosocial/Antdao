@@ -1,0 +1,17 @@
+There are three pieces to og-image that are worth noting before you begin development.
+
+The backend image generator located in /api/index.ts
+The html/css template used to generate the image is located in /_lib/template.ts
+The frontend inputs located in /web/index.ts
+Vercel handles routing in an elegant way for us so deployment is easy.
+
+To start hacking, do the following:
+
+Clone this repo with git clone https://github.com/vercel/og-image
+Change directory with cd og-image
+Run yarn or npm install to install all dependencies
+Run locally with vercel dev and visit localhost:3000 (if nothing happens, run npm install -g vercel)
+If necessary, edit the exePath in options.ts to point to your local Chrome executable
+Now you're ready to start local development!
+
+You can set an environment variable to assist with debugging export OG_HTML_DEBUG=1. This will render the image as HTML so you can play around with your browser's dev tools before committing changes to the template.
